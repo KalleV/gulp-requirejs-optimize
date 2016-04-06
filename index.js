@@ -87,7 +87,7 @@ module.exports = function(options) {
 			cb(null, file);
 		};
 
-		gutil.log('Optimizing ' + chalk.magenta(file.relative));
+		gutil.log('Optimizing ' + chalk.magenta(file.path));
 		requirejs.optimize(optimizeOptions, null, function(err) {
 			error = err;
 			cb();
